@@ -5,7 +5,7 @@ pipeline {
             steps {
                 timeout(time: 3, unit: 'MINUTES') {
                     retry(5) {
-                       sudo sh './flakey-deploy.sh'
+                       sh './flakey-deploy.sh'
                     }
                 }
             }
